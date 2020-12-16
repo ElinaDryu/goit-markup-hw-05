@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -54,7 +55,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-text">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="hero-btn">Заказать услугу</button>
+                <button type="button" class="hero-btn  animate__pulse" data-modal-open>Заказать услугу</button>
             </div>
         </section>
 
@@ -87,9 +88,16 @@
             <div class="container">
             <h2 class="activity-title">Чем мы занимаемся</h2>
             <ul class="list activity-list">
-                <li class="activity-item"><img src="./img/note.png" alt="Печать на ноутбуке" width="370" height="294"></li>
-                <li class="activity-item"><img src="./img/tel.png" alt="Просмотр телефона" width="370" height="294"></li>
-                <li class="activity-item"><img src="./img/tablet.png" alt="Просмотр планшета" width="370" height="294"></li>
+                <li class="activity-item">
+                    <img src="./img/note.png" alt="Печать на ноутбуке" width="370" height="294">
+                    <p class="activity-text">Десктопные приложения</p>
+                </li>
+                <li class="activity-item"><img src="./img/tel.png" alt="Просмотр телефона" width="370" height="294">
+                    <p class="activity-text">Мобильные приложения</p>
+                </li>
+                <li class="activity-item"><img src="./img/tablet.png" alt="Просмотр планшета" width="370" height="294">
+                    <p class="activity-text">Дизайнерские решения</p>
+                </li>
             </ul>
             </div>
         </section>
@@ -318,5 +326,16 @@
         </div>
         </div>
     </footer>
+
+<!-- МОДАЛКА -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-btn close" data-modal-close>
+                <use href="./img/close-btn.svg"></use>
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
